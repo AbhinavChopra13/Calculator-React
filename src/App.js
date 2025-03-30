@@ -26,6 +26,14 @@ function App() {
  
   function divide(e) { 
     e.preventDefault();
+
+    const value = Number(inputRef.current.value)
+    if(value === 0)
+    {
+      alert("Cannot divide by zero!");
+      return;
+    }
+
     setResult((result) => result / Number(inputRef.current.value));
   };
  
